@@ -38,6 +38,15 @@
                 </div>
             </div>
         </div>
-        
+        <script>
+            const apiKey="4027364c551ca5f822ff88395ea11deb";
+            const apiUrl="https://api.openweathermap.org/data/2.5/weather?q&units=metric&q=Italy";
+            async function CheckWeather(){
+                const responce= await fetch(apiUrl+`&appid=4027364c551ca5f822ff88395ea11deb`);
+                var data=await responce.json();
+                console.log(data);
+            }
+            CheckWeather();
+        </script>
     </body>
 </html>
